@@ -14,3 +14,15 @@ developer_answer = input ("are you a developer? (yes/no): ").strip().lower()
 is_developer=developer_answer=="yes" or developer_answer=="y"
 print(name ,age, is_developer, type(age))
 
+
+if age < 18:
+
+     tier = "Tier 3: Guest"
+
+elif age >= 18 and is_developer: 
+     tier = " Tier 1: Admin Infrastructure Access"
+ 
+else: 
+     tier = " Tier 2: Standard Executive Access"
+
+print(tier) 
