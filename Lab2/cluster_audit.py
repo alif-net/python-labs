@@ -19,7 +19,12 @@ def calculate_capacity(config):
     utilization = (active_count / total_slots) * 100
     print(active_count, total_slots, utilization)
 
+#Todo 3: print the status statement
 
-# Execute the audit tool
+    cluster_name = config["cluster_name"]
+
+    print(f"Cluster: {cluster_name}")
+    print(f"active nodes: {active_count} of {total_slots} slots")
+    print(f"Utilization : {utilization}%")
+
 calculate_capacity(cluster_config)
-
