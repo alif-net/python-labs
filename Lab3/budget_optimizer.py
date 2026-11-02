@@ -16,12 +16,14 @@ def estimate_deployment_cost(instance_count, hourly_rate, budget_cap):
 
     if total_monthly_cost > budget_cap:
          exceeded_by = total_monthly_cost - budget_cap 
-         return f"Rejected: Budget Exceeded by ${exceeded_by}!"
+         return f"Rejected: Budget Exceeded by ${exceeded_by:.2f}!"
 
     else: 
 
-        return f"Approved: Total Estimated Cost by ${exceeded_by}!"
+        return f"Approved: Total Estimated Cost by ${exceeded_by:.2f}!"
 
 
 print(estimate_deployment_cost(instance_count=5, hourly_rate=0.45, budget_cap=1500.00))
 print(estimate_deployment_cost(instance_count=12, hourly_rate=0.85, budget_cap=5000.00))
+
+
